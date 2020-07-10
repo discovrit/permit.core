@@ -1,17 +1,22 @@
 ﻿using System;
+using Kamak.Core.Processor.Domain;
 
 namespace Kamak.Core.Processor
 {
-    internal class LessonBookingRequestProcessor
+     public class LessonBookingRequestProcessor
     {
         public LessonBookingRequestProcessor()
         {
         }
 
-        internal LessonBookingResult BookLesson(LessonBookingRequest request)
+        public LessonBookingResult BookLesson(LessonBookingRequest request)
         {
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+
             return new LessonBookingResult
             {
+                StudentId = request.StudentId,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Email = request.Email,

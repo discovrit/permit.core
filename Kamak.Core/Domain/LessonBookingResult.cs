@@ -1,10 +1,13 @@
-﻿namespace Kamak.Core.Processor
+﻿using System;
+
+namespace Kamak.Core.Processor.Domain
 {
-    internal class LessonBookingResult
+    public class LessonBookingResult
     {
-        public object FirstName { get; set; }
-        public object LastName { get; set; }
-        public object Email { get; set; }
-        public object Date { get; set; }
+        public int StudentId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public DateTime Date { get; set; }
     }
 }
