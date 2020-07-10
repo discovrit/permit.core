@@ -1,7 +1,7 @@
 ﻿using System;
-using Kamak.Core.Processor.Domain;
+using Kamak.Core.Domain;
 
-namespace Kamak.Core.Processor.Factory
+namespace Kamak.Core.Factory
 {
     public class LessonBookingFactory
     {
