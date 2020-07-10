@@ -3,19 +3,16 @@ using Kamak.Core.Domain;
 
 namespace Kamak.Core.Factory
 {
-    public class LessonBookingFactory
+    public class BookingFactory
     {
-        public LessonBookingRequest GetBaseLessonBookingRequest()
+        public Booking GetBaseBooking()
         {
-            return BaseLessonBookingRequest();
+            return BaseBooking();
         }
 
-
-
-
-        private LessonBookingRequest BaseLessonBookingRequest()
+        private Booking BaseBooking()
         {
-            return new LessonBookingRequest
+            return new Booking
             {
                 StudentId = 1,
                 FirstName = "Melody",

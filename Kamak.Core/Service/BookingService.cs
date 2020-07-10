@@ -1,20 +1,20 @@
 ﻿using System;
 using Kamak.Core.Domain;
 
-namespace Kamak.Core.Processor
+namespace Kamak.Core.Service
 {
-     public class LessonBookingRequestProcessor
+     public class BookingService
     {
-        public LessonBookingRequestProcessor()
+        public BookingService()
         {
         }
 
-        public LessonBookingResult BookLesson(LessonBookingRequest request)
+        public BookingResponse BookLesson(Booking request)
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
 
-            return new LessonBookingResult
+            return new BookingResponse
             {
                 StudentId = request.StudentId,
                 FirstName = request.FirstName,

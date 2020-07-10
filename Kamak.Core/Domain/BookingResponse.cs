@@ -2,7 +2,7 @@
 
 namespace Kamak.Core.Domain
 {
-    public class LessonBookingResult : LessonBooking
+    public class BookingResponse : Booking
     {
 
     }
