@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Kamak.Core.Domain
 {
-    public class LessonBooking
+    public class Booking
     {
         public int StudentId { get; set; }
         public string FirstName { get; set; }
