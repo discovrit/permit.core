@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kamak.Core.Factory;
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
@@ -8,20 +9,23 @@ namespace Kamak.Core.Service
 {
     public class AuthenticationServiceTests
     {
+        private readonly AuthenticationFactory _factory;
+        private readonly AuthenticationService _service;
+
+        public AuthenticationServiceTests()
+        {
+            _factory = new AuthenticationFactory();
+            _service = new AuthenticationService();
+        }
+
         [Fact]
         public void ShouldReturnSuccessIfCredentialsProvided()
         {
             //Arrange
-            var request = new UserCredential
-            {
-                Username = "melody.sunshin@permit.com",
-                Password = "Password123!"
-            };
-
-            var processor = new AuthenticationService();
+            var request = _factory.GetUserCredential();
 
             //Act
-            UserCredentialResponse response = processor.Login(request);
+            UserCredentialResponse response = _service.Login(request);
 
             //Assert
             Assert.NotNull(response);
@@ -33,10 +37,9 @@ namespace Kamak.Core.Service
         public void ThrowsNullExceptionIfNoCredentials()
         {
             //Arrange
-            var processor = new AuthenticationService();
 
             //Act
-            var exeception = Assert.Throws<ArgumentNullException>(() => processor.Login(null));
+            var exeception = Assert.Throws<ArgumentNullException>(() => _service.Login(null));
 
             //Assert
             Assert.Equal("request", exeception.ParamName);

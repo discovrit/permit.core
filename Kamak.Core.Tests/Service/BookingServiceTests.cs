@@ -33,6 +33,7 @@ namespace Kamak.Core.Service
             Assert.Equal(request.Email, response.Email);
             Assert.Equal(request.Date, response.Date);
             Assert.Equal(request.Hours, response.Hours);
+            Assert.Equal(request.Minutes, response.Minutes);
         }
 
         [Fact]

@@ -20,7 +20,7 @@ namespace Kamak.Core.Factory
                 Email = "melody.sunshin@permit.com",
                 Date = new DateTime(2020, 1, 1),
                 Hours = 12,
-                Minutes = 00
+                Minutes = 15
             };
         }
     }

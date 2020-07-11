@@ -20,7 +20,9 @@ namespace Kamak.Core.Service
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Email = request.Email,
-                Date = request.Date
+                Date = request.Date,
+                Hours = request.Hours,
+                Minutes = request.Minutes
             };
         }
     }
