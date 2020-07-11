@@ -45,5 +45,18 @@ namespace Kamak.Core.Service
             Assert.Equal("request", exeception.ParamName);
 
         }
+
+        [Fact]
+        public void ShouldReturnErrorIfCredentialsIncorrect()
+        {
+            //Arrange
+
+            
+            //Act
+
+
+            //Assert
+
+        }
     }
 }
